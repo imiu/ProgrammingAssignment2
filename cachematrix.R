@@ -4,7 +4,7 @@
 ## by storing values in local environment of special cacheable matrix implementation
 ##
 ## Usage example:
-##
+#================
 # m <- makeCacheMatrix(matrix(1:4, nrow=2))
 # all(m$get() %*% cacheSolve(m) == diag(2)) # gives TRUE
 # all(m$get() %*% cacheSolve(m) == diag(2)) # prints "getting cached data" and returns TRUE
@@ -52,3 +52,4 @@ cacheSolve <- function(x, ...) {
 m <- makeCacheMatrix(matrix(1:4, nrow=2))
 all(m$get() %*% cacheSolve(m) == diag(2)) # gives TRUE
 all(m$get() %*% cacheSolve(m) == diag(2)) # prints "getting cached data" and returns TRUE
+
